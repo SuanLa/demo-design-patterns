@@ -101,7 +101,7 @@ UML是一种开放的方法，用于说明、可视化、构建和编写一个�
 >
 > 关系。
 
-例如：![image-20230523173825816](.\images\image-20230523173825816.png)
+例如：![](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523173825816.png)
 
 对应的代码：
 
@@ -126,25 +126,25 @@ public class Demo {
 >
 > 代码中被关联的对象以成员变量的方式体现。
 
-![image-20230523172826313](.\images\image-20230523172826313.png)
+![](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523172826313.png)
 
 #### 3.1.1双向关联
 
 > 不带箭头就是双向关联，如下图所示
 
-![image-20230523174945519](.\images\image-20230523174945519.png)
+![](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523174945519.png)
 
 #### 3.1.2单向关联
 
 > 下面是一个单向关联的UML表示方式
 
-![image-20230523175114597](.\images\image-20230523175114597.png)
+![image-20230523175114597](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523175114597.png)
 
 #### 3.3.3自关联
 
 > 类的属性对象包含自己的情况，如下图所示
 
-![image-20230523175248222](.\images\image-20230523175248222.png)
+![image-20230523175248222](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523175248222.png)
 
 #### 3.3.4多重性关联
 
@@ -162,7 +162,7 @@ public class Demo {
 
 - m..n：表示另一个类的一个对象与该类最少m最多n个对象有关系（m ≤ n）
 
-![image-20230523175750256](.\images\image-20230523175750256.png)
+![image-20230523175750256](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523175750256.png)
 
 ### 3.2聚合关系
 
@@ -170,7 +170,7 @@ public class Demo {
 >
 > 脱了整体对象而独立存在。
 >
-> ![image-20230523180030267](.\images\image-20230523180030267.png)
+> ![image-20230523180030267](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523180030267.png)
 
 ### 3.3组合关系
 
@@ -178,7 +178,7 @@ public class Demo {
 >
 > 期，一旦整体对象消亡成员对象将消失。
 
-![image-20230523180150867](.\images\image-20230523180150867.png)
+![image-20230523180150867](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523180150867.png)
 
 ### 3.4依赖关系
 
@@ -186,13 +186,13 @@ public class Demo {
 >
 > 一个类的对象作为方法参数。
 
-![image-20230523173414525](.\images\image-20230523173414525.png)
+![image-20230523173414525](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523173414525.png)
 
 ### 3.5泛化关系
 
 > 泛化（Generalization）关系也就是继承关系。
 
-![image-20230523174215619](.\images\image-20230523174215619.png)
+![image-20230523174215619](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523174215619.png)
 
 ### 3.6接口与实现关系
 
@@ -200,7 +200,7 @@ public class Demo {
 >
 > 种实现（Realization）关系，在这种关系中类实现了接口中所有的操作。
 
-![image-20230523174518485](.\images\image-20230523174518485.png)
+![image-20230523174518485](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523174518485.png)
 
 # 三、工厂模式
 
@@ -228,7 +228,7 @@ public class Demo {
 
 *化新对象。*
 
-![image-20230523181245380](.\images\image-20230523181245380.png)
+![image-20230523181245380](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523181245380.png)
 
 在简单工厂模式结构图中包含如下几个角色：
 
