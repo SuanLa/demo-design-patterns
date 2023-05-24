@@ -202,7 +202,7 @@ public class Demo {
 
 ![image-20230523174518485](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523174518485.png)
 
-# 三、工厂模式
+# 三、简单工厂模式
 
 > 简单工厂模式（**Simple Factory Pattern**）又叫做静态工厂方法模式（**Static Factory Method**
 >
@@ -228,7 +228,7 @@ public class Demo {
 
 *化新对象。*
 
-![image-20230523181245380](https://github.com/SuanLa/demo-design-patterns/blob/master/images/image-20230523181245380.png)
+![image-20230523181245380](./images/image-20230523181245380.png)
 
 在简单工厂模式结构图中包含如下几个角色：
 
@@ -247,3 +247,274 @@ public class Demo {
 - **ConcreteProduct （具体产品角色）**：它是简单工厂模式的创建目标，所有被创建的对象都充当
 
 这个角色的某个具体类的实例。每一个具体产品角色都继承了抽象产品角色，需要实现在抽象产品中声明的抽象方法。
+
+
+
+# 四、工厂方法模式
+
+> 工厂方法模式也被称为虚拟构造器模式（**Virtual Constructor Pattern**）或多态工厂模式
+
+> （**Polymorphic Factory Pattern**）。
+
+其定义如下：
+
+*Define an interface for creating an object, but let subclasses decide which class to*
+
+*instantiate. Factory Method lets a class defer instantiation to subclasses.*
+
+*定义一个用于创建对象的接口，让子类决定将哪一个类实例化。工厂方法模式让一个类的实例化*
+
+*延迟到其子类。*
+
+在工厂方法模式中，**不再提供一个统一的工厂类来创建所有的产品对象，而是针对不同的产品提供不同**
+
+**的工厂，系统提供一个与产品等级结构对应的工厂等级结构**。
+
+![image-20230524173709938](./images/image-20230524173709938.png)
+
+在工厂方法模式结构图中包含如下几个角色：
+
+**Product（抽象产品）**：它是定义产品的接口，是工厂方法模式所创建对象的超类型，也就是产品对象
+
+的公共父类。
+
+**ConcreteProduct（具体产品）**：它实现了抽象产品接口，某种类型的具体产品由专门的具体工厂创
+
+建，具体工厂和具体产品之间一一对应。
+
+**Factory（抽象工厂）**：在抽象工厂类中，声明了工厂方法(Factory Method)，用于返回一个产品。抽
+
+象工厂是工厂方法模式的核心，所有创建对象的工厂类都必须实现该接口。
+
+**ConcreteFactory（具体工厂）**：它是抽象工厂类的子类，实现了抽象工厂中定义的工厂方法，并可由
+
+客户端调用，返回一个具体产品类的实例。
+
+# 五、抽象工厂模式
+
+> 工厂方法模式通过引入工厂等级结构，解决了简单工厂模式中工厂类职责太重的问题，但由于工厂方法
+>
+> 模式中的**每个工厂只生产一类产品**，可能会导致系统中存在大量的工厂类，势必会增加系统的开销。此
+>
+> 时，我们可以考虑将一些相关的产品组成一个“产品族”，由同一个工厂来统一生产，这就是抽象工厂模
+>
+> 式（**Abstract Factory Pattern**）的基本思想。
+
+其定义如下：
+
+*Wikipedia says: The abstract factory pattern provides a way to encapsulate a group of individual*
+
+*factories that have a common theme without specifying their concrete classes.*
+
+*抽象工厂模式提供了一种方法来封装一组具有共同主题的单个工厂，而无需指定其具体类。*
+
+*Provide an interface for creating families of related or dependent objects without specifying their*
+
+*concrete classes.*
+
+*提供一个创建一系列相关或相互依赖对象的接口，而无须指定它们具体的类。*
+
+**抽象工厂模式是所有形式的工厂模式中最为抽象和最具一般性的一种形式。**
+
+当一个工厂等级结构可以创建出分属于不同产品等级结构的一个产品族中的所有对象时，抽象工厂模式
+
+比工厂方法模式更为简单、更有效率。
+
+![image-20230524175339428](./images/image-20230524175339428.png)
+
+在抽象工厂模式结构图中包含如下几个角色：
+
+**AbstractFactory（抽象工厂）**：它声明了一组用于创建一组产品的方法，每一个方法对应一种产品。
+
+**ConcreteFactory（具体工厂）**：它实现了在抽象工厂中声明的创建产品的方法，生成一组具体产品，
+
+这些产品构成了一个产品族，每一个产品都位于某个产品等级结构中。
+
+**AbstractProduct（抽象产品）**：它为每种产品声明接口，在抽象产品中声明了产品所具有的业务方
+
+法。
+
+**ConcreteProduct（具体产品）**：它定义具体工厂生产的具体产品对象，实现抽象产品接口中声明的
+
+业务方法。
+
+# 六、单例模式
+
+> 对于一个软件系统的某些类而言，我们无须创建多个实例。为了节约系统资源，有时需要确保系统中某
+>
+> 个类只有唯一一个实例，当这个唯一实例创建成功之后，我们无法再创建一个同类型的其他对象，所有
+>
+> 的操作都只能基于这个唯一实例。为了确保对象的唯一性，我们可以通过单例模式（**Singleton**
+>
+> **Pattern**）来实现，这就是单例模式的动机所在。单例模式又名单件模式或单态模式。
+
+其定义如下：
+
+*Wikipedia says: In software engineering, the singleton pattern is a software design pattern that*
+
+*restricts the instantiation of a class to one object. This is useful when exactly one object is needed*
+
+*to coordinate actions across the system.*
+
+*在软件工程中，单例模式是一种软件设计模式，它将类的实例化限制为一个对象。当需要一个对*
+
+*象来协调整个系统的操作时，这很有用。*
+
+*Ensure a class only has one instance, and provide a global point of access to it.*
+
+*确保某一个类只有一个实例，并提供一个全局的访问点来访问这个实例。*
+
+
+
+![image-20230524180042663](./images/image-20230524180042663.png)
+
+单例模式结构图中只包含一个单例角色：
+
+**Singleton（单例）**：在单例类的内部实现只生成一个实例，同时它提供一个静态的 getInstance ()工
+
+厂方法，让客户可以访问它的唯一实例；为了防止在外部对其实例化，将其构造函数设计为私有；在单
+
+例类内部定义了一个Singleton类型的静态对象，作为外部共享的唯一实例。
+
+# 七、建造者模式
+
+> 建造者模式（Builder Parttern），将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。建造者模式是一步一步创建一个复杂的对象，它允许用户只通过指定复杂对象的类型和内容就可以构建他们，用户不需要知道内部的具体构建细节。建造者模式又可以称为生成器模式。
+
+建造者模式（Builder Pattern）定义如下：
+
+*Wikipedia says: The builder pattern is an object creation software design pattern with the*
+
+*intentions of finding a solution to the telescoping constructor anti-pattern.*
+
+*建造者模式是一种对象创建软件设计模式，旨在找到伸缩构造器反模式的解决方案。*
+
+*伸缩性构造的反模式：指通过构造器实现对象构建参数初始化，如果对象属性比较多，导致构造*
+
+*器的参数个数不可控。*
+
+*Separate the construction of a complex object from its representation so that the same*
+
+*construction process can create different representations.*
+
+*将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。*
+
+![image-20230524181215043](./images/image-20230524181215043.png)
+
+在建造者模式结构图中包含如下几个角色：
+
+**Builder（抽象建造者）**：它为创建一个产品Product对象的各个部件指定抽象接口，在该接口中
+
+一般声明两类方法，一类方法是 buildPartXXXX ()，它们用于创建复杂对象的各个部件；另一类
+
+方法是build()，它们用于返回复杂对象。Builder既可以是抽象类，也可以是接口。
+
+**ConcreteBuilder （具体建造者）**：它实现了Builder接口，实现各个部件的具体构造和装配方
+
+法，定义并明确它所创建的复杂对象，也可以提供一个方法返回创建好的复杂产品对象。
+
+**Product（产品角色）**：它是被构建的复杂对象，包含多个组成部件，具体建造者创建该产品的内
+
+部表示并定义它的装配过程。
+
+**Director（指挥者）**：指挥者又称为导演类，它负责安排复杂对象的建造次序，指挥者与抽象建
+
+造者之间存在关联关系，可以在其construct()建造方法中调用建造者对象的部件构造与装配方法，
+
+完成复杂对象的建造。客户端一般只需要与指挥者进行交互，在客户端确定具体建造者的类型，并
+
+实例化具体建造者对象（也可以通过配置文件和反射机制），然后通过指挥者类的构造函数或者
+
+Setter方法将该对象传入指挥者类中。
+
+# 八、适配器模式
+
+> 适配器模式（**Adapter Pattern**），将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，其别名为包装器。适配器模式既可以作为类结构型模式，也可以作为对象结构型模式。适配器模式也叫包装器（**Wrapper**）模式。
+
+适配器模式定义如下：
+
+*Wikipedia says: In software engineering, the adapter pattern is a software design pattern that*
+
+*allows the interface of an existing class to be used as another interface. It is often used to make*
+
+*existing classes work with others without modifying their source code.*
+
+*在软件工程中，适配器模式是一种软件设计模式，它允许将现有类的接口用作另一个接口。它通*
+
+*常用于使现有类与其他类一起工作，而无需修改其源代码。*
+
+*Convert the interface of a class into another interface the clients expect. Adapter lets classes work*
+
+*together that couldn't otherwise because of incompatible interfaces.*
+
+*将类的接口转换为客户端期望的另一个接口。适配器让那些接口不兼容的类可以一起工作。*
+
+***TIP**：在适配器模式定义中所提及的接口是指广义的接口，它可以表示一个方法或者方法的集合*
+
+## 1.类适配器模式
+
+![image-20230524182552647](./images/image-20230524182552647.png)
+
+在对象适配器模式结构图中包含如下几个角色：
+
+**Target（目标抽象类）**：目标抽象类定义客户所需接口，可以是一个抽象类或接口，也可以是具
+
+体类。
+
+**Adapter（适配器类）**：适配器可以调用另一个接口，作为一个转换器，对 Adaptee 和Target进
+
+行适配，适配器类是适配器模式的核心，在对象适配器中，它通过继承Target并关联一个Adaptee 对象使二者产生联系。
+
+**Adaptee （适配者类）**：适配者即被适配的角色，它定义了一个已经存在的接口，这个接口需要
+
+适配，适配者类一般是一个具体类，包含了客户希望使用的业务方法，在某些情况下可能没有适配
+
+者类的源代码。
+
+## 2.对象适配器
+
+![image-20230524182759633](./images/image-20230524182759633.png)
+
+在类适配器模式结构图中包含如下几个角色：
+
+**Target（目标抽象类）**：目标抽象类定义客户所需接口，由于Java不支持多继承，所以Target只能
+
+是接口类型。
+
+**Adapter（适配器类）**：适配器可以调用另一个接口，作为一个转换器，对 Adaptee 和Target进
+
+行适配，适配器类是适配器模式的核心，在类适配器中，它通过实现Target接口和继承 Adaptee
+
+类来使二者产生联系。
+
+**Adaptee （适配者类）**：适配者即被适配的角色，它定义了一个已经存在的接口，这个接口需要
+
+适配，适配者类一般是一个具体类，包含了客户希望使用的业务方法，在某些情况下可能没有适配
+
+者类的源代码。
+
+# 九、组合模式
+
+
+
+# 十、外观模式
+
+
+
+# 十一、代理模式
+
+
+
+# 十二、迭代器模式
+
+
+
+# 十三、观察者模式
+
+
+
+# 十四、装饰器模式
+
+
+
+# 十五、模板方法模式
+
