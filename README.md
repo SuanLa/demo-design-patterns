@@ -432,7 +432,7 @@ public class Demo {
 
 ## 2.模式结构
 
-![image-20230524181215043](./images/image-20230524181215043.png)
+![image-20230525142656075](./images/image-20230525142656075.png)
 
 在建造者模式结构图中包含如下几个角色：
 
@@ -542,27 +542,378 @@ Setter方法将该对象传入指挥者类中。
 
 # 九、组合模式
 
+## 1.模式定义
 
+> 组合模式（**Composite Pattern**）,组合多个对象形成树形结构以表示“部分一整体”的结构层次。组合模式对单个对象（即叶子对象）和组合对象（及容器对象）的使用具有一致性。组合模式又可以称为“部分一整体”（Part-Whole）模式，它将对象组织到树结构中，可以用来描述整体与部分的关系。
+
+其定义如下：
+
+*Wikipedia says : The composite pattern describes that a group of objects is to be treated in the*
+
+*same way as a single instance of an object. The intent of a composite is to "compose" objects into*
+
+*tree structures to represent part-whole hierarchies. Implementing the composite pattern lets*
+
+*clients treat individual objects and compositions uniformly.*
+
+*组合模式描述了在对待一组对象实例的时候，使用以单个对象实例相同的方式对待。*
+
+组合的目的是将对象“组合”成树形结构，以表示部分整体层次结构。
+
+通过实现组合模式，客户端可以统一对待各个对象与组合。
+
+## 2.模式结构
+
+![image-20230525125842304](./images/image-20230525125842304.png)
+
+在组合模式结构图中包含如下几个角色：
+
+**Component（抽象构件）**：它可以是接口或抽象类，为叶子构件和容器构件对象声明接口，在该
+
+角色中可以包含所有子类共有行为的声明和实现。在抽象构件中定义了访问及管理它的子构件的方
+
+法，如增加子构件、删除子构件、获取子构件等。
+
+**Leaf（叶子构件）**：它在组合结构中表示叶子节点对象，叶子节点没有子节点，它实现了在抽象
+
+构件中定义的行为。对于那些访问及管理子构件的方法，可以通过异常等方式进行处理。
+
+**Composite（容器构件）**：它在组合结构中表示容器节点对象，容器节点包含子节点，其子节点
+
+可以是叶子节点，也可以是容器节点，它提供一个集合用于存储子节点，实现了在抽象构件中定义
+
+的行为，包括那些访问及管理子构件的方法，在其业务方法中可以递归调用其子节点的业务方法。
+
+## 3.模式应用
+
+1.使用组合模式设计一个杀毒软件（AntiVirus）的框架，该软件既可以对某个文件夹（Folder）杀毒，也可以对某个指定的的文件（File）进行杀毒，文件种类包括文本文件TextFile、图片文件ImageFile、视频文件VideoFile。
 
 # 十、外观模式
 
+## 1.模式定义
 
+> 外观模式（**Facade Pattern**），为子系统中的一组接口提供一个统一的入口。外观模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。在外观模式中，外部与一个子系统的通信可以通过统一的外观对象进行。外观模式又称为门面模式，它是一种对象结构模式。
+
+其定义如下：
+
+*Wikipedia says : A facade is an object that provides a simplified interface to a larger body of*
+
+*code, such as a class library.*
+
+*外观是一个对象，它为更大的代码 (例如类库) 提供了简化的接口。Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level*
+
+*interface that makes the subsystem easier to use.*
+
+*为子系统中的一组接口提供一个统一的入口。外观模式定义了一个高层接口，这个接口使得这一*
+
+*子系统更加容易使用。*
+
+外观模式是**迪米特法则**的一种具体实现，通过引
+
+入一个新的外观角色可以降低原有系统的复杂度，同时降低客户类与子系统的耦合度。
+
+## 2.模式结构
+
+![image-20230525131116260](./images/image-20230525131116260.png)
+
+外观模式包含如下两个角色：
+
+**外观（Facade）** ：提供了一种访问特定子系统功能的便捷方式， 其了解如何重定向客户端请
+
+求， 知晓如何操作一切活动部件。
+
+**附加外观 （Additional Facade）**：可以避免多种不相关的功能污染单一外观， 使其变成又一个
+
+复杂结构。 客户端和其他外观都可使用附加外观。
+
+**复杂子系统 （Complex Subsystem）**：由数十个不同对象构成。 如果要用这些对象完成有意义
+
+的工作， 你必须深入了解子系统的实现细节， 比如按照正确顺序初始化对象和为其提供正确格式
+
+的数据。子系统类不会意识到外观的存在， 它们在系统内运作并且相互之间可直接进行交互。
+
+**客户端 （Client）**：使用外观代替对子系统对象的直接调用。
+
+## 3.模式应用
+
+1.在计算机主机（ Mainframe ）中，只需要按下主机的开机按钮（on ())，即可调用其他件设备和软件的启动方法，如内存（Memory ）的自检（check ())、 CPU 的运行（run ())、硬盘( HardDisk ）的读取（read ())、操作系统（ OS ）的载人（load ()）等，如果某一过程发生错误则计算机启动失败。使用外观模式模拟该过程，绘制类图并编程实现。
 
 # 十一、代理模式
 
+## 1.模式定义
 
+> 代理模式**（Proxy Pattern）**，给某一个对象提供一个代理，并由代理对象控制对原对象的引用。代理模式的英文叫做Proxy或Surrogate。
+
+其定义如下：
+
+*Wikipedia says: A proxy, in its most general form, is a class functioning as an interface to*
+
+*something else. A proxy is a wrapper or agent object that is being called by the client to access*
+
+*the real serving object behind the scenes. Use of the proxy can simply be forwarding to the real*
+
+*object, or can provide additional logic. In the proxy extra functionality can be provided, for*
+
+*example caching when operations on the real object are resource intensive, or checking*
+
+*preconditions before operations on the real object are invoked.*
+
+*代理，以其最一般的形式，是一个类，用作其他东西的接口。**代理是一个包装器或代理对象，客***
+
+***户端正在调用它来访问幕后的真实服务对象。代理的使用可以简单地转发到真实对象，或者可以***
+
+***提供额外的逻辑。**在代理中，可以提供额外的功能，例如，当对真实对象的操作是资源密集型时*
+
+*缓存，或者在调用对真实对象的操作之前检查前提条件。*
+
+*Provide a surrogate or placeholder for another object to control access to it.*
+
+*给某一对象提供一个代理或占位符，并由代理对象来控制对原对象的访问。*
+
+
+
+## 2.模式结构
+
+![image-20230525142524219](./images/image-20230525142524219.png)
+
+代理模式包含如下三个角色：
+
+**服务接口 （Service Interface）**： 声明了服务接口（真实角色和代理角色共有接口）。 这样一
+
+来在任何使用真实角色的地方都可以使用代理角色，客户端通常需要针对服务接口进行编程。
+
+**服务（Service）**：它定义了代理角色所代表的真实对象，在真实角色中实现了真实的业务操作，
+
+客户端可以通过代理角色间接调用真实角色中定义的操作。
+
+**代理（Proxy）**： 包含一个指向服务对象的引用成员变量。 代理完成其任务 （例如延迟初始化、
+
+记录日志、 访问控制和缓存等） 后会将请求传递给服务对象。 通常情况下， 代理会对其服务对
+
+象的整个生命周期进行管理。
+
+**客户端（Client）**： 能通过同一接口与服务或代理进行交互， 所以你可在一切需要服务对象的代
+
+码中使用代理。
+
+## 3.模式应用
+
+1.应用软件所提供的桌面快捷方式是快速启动应用程序的代理，桌面快捷方式一般使田一张小图片（ Picture ）来表示，通过调用快捷方式的 run (）方法将调用应用软件( Application ）的 run (）方法。使用代理模式模拟该过程，试绘制类图并编程实现。
 
 # 十二、迭代器模式
 
+## 1.模式定义
 
+> 迭代器模式（**Iterator Pattern**），提供一种方法来访问聚合对象，而不用暴露这个对象的内部表示，其别名为游标（Cursor）。
+
+其定义如下：
+
+*Wikipedia says : the iterator pattern is a design pattern in which an iterator is used to traverse*
+
+*a container and access the container's elements.*
+
+*迭代器模式是一种设计模式，其中迭代器用于遍历容器并访问容器的元素。*
+
+*Provide a way to access the elements of an aggregate object sequentially without exposing its*
+
+*underlying representation.*
+
+*提供一种方法顺序访问一个聚合对象中的各个元素，而又不用暴露该对象的内部表示。*
+
+## 2.模式结构
+
+![image-20230525133538128](./images/image-20230525133538128.png)
+
+在迭代器模式结构图中包含如下几个角色：
+
+**Iterator（抽象迭代器）**：它定义了访问和遍历元素的接口，声明了用于遍历数据元素的方法，在
+
+具体迭代器中将实现这些方法。
+
+**ConcreteIterator（具体迭代器）**：它实现了抽象迭代器接口，完成对聚合对象的遍历，同时
+
+在具体迭代器中通过游标来记录在聚合对象中所处的当前位置，在具体实现时，游标通常是一个表
+
+示位置的非负整数。
+
+**Aggregate（抽象聚合类）**：它用于存储和管理元素对象，声明一个 getIterator() 方法用于创
+
+建一个迭代器对象，充当抽象迭代器工厂角色。
+
+**ConcreteAggregate （具体聚合类）**：它实现了在抽象聚合类中声明的 getIterator() 方法，
+
+该方法返回一个与该具体聚合类对应的具体迭代器 ConcreteIterator 实例。
+
+## 3.模式应用
+
+1.某教务管理系统中一个班级（ Class ）包含多个学生（ Student )，使用 Java 内置迭代器实现对学生信息的遍历，要求按学生年龄由大到小的次序输出学生信息。
 
 # 十三、观察者模式
 
+## 1.模式定义
 
+> 观察者模式（**Observer Pattern**）,定义一种定义对象间的一种一对多依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象皆得到通知并被自动更新。观察者模式又叫做发布﹣订阅（ Publish / Subscribe ）模式、模型﹣视图（ Model / View ）模式、源﹣监听器（ Source /Lisetner）模式或从属者（Dependents）模式。
+
+其定义如下：
+
+*Wikipedia says : The observer pattern is a software design pattern in which an object, called*
+
+*the subject, maintains a list of its dependents, called observers, and notifies them automatically*
+
+*of any state changes, usually by calling one of their methods.*
+
+*观察者模式是一种软件设计模式，其中一个称为主体的对象维护其依赖项列表，称为观察者，并*
+
+*通常通过调用其方法之一自动将任何状态更改通知它们。*
+
+*Define a one-to-many dependency between objects so that when one object changes state, all its*
+
+*dependents are notified and updated automatically.*
+
+*定义对象之间的一种一对多的依赖关系，使得每当一个对象状态发生改变时其相关依赖对象都得*
+
+*到通知并被自动更新。*
+
+## 2.模式结构
+
+![image-20230525142412717](./images/image-20230525142412717.png)
+
+在观察者模式结构图中包含如下几个角色：
+
+**Subject（目标）**：目标又称为主题，它是指被观察的对象。在目标中定义了一个观察者集合，一
+
+个观察目标可以接受任意数量的观察者来观察，它提供一系列方法来增加和删除观察者对象，同时
+
+它定义了通知方法notify()。目标类可以是接口，也可以是抽象类或具体类。
+
+**ConcreteSubject （具体目标）**：具体目标是目标类的子类，通常它包含有经常发生改变的数
+
+据，当它的状态发生改变时，向它的各个观察者发出通知；同时它还实现了在目标类中定义的抽象
+
+业务逻辑方法。如果无须扩展目标类，则具体目标类可以省略。
+
+**Observer（观察者）**：观察者将对观察目标的改变做出反应，观察者一般定义为接口，该接口声
+
+明了更新数据的方法update()，因此又称为抽象观察者。
+
+**ConcreteObserver （具体观察者）**：在具体观察者中维护一个指向具体目标对象的引用，它存
+
+储具体观察者的有关状态，这些状态需要和具体目标的状态保持一致；它实现了在抽象观察者
+
+Observer中定义的update()方法。通常在实现时，可以调用具体目标类的attach()方法将自己添加
+
+到目标类的集合中或通过detach()方法将自己从目标类的集合中删除。
+
+## 3.模式应用
+
+1.利用观察者模式实现股票信息接收。实例说明:某在线股票软件需要提供如下功能:当股票购买者所购买的某支股票价格变化幅度达到 5%时，系统将自动发送通知(包括新价格)给购买该股票的股民。现使用观察者模式设计该系统，绘制类图并编程模拟实现。
 
 # 十四、装饰器模式
 
+## 1.模式定义
 
+> 装饰模式（ DecoratorPattern ）,动态地给一个对象增加一些额外的职责 Responsibility )，就增加对象功能来说，装饰模式比生成子类实现更为灵活。其别名也可以称为包装器（ Wrapper )，与适配器模式的别名相同，但它们适用于不同的场合。根据翻译的不同，装饰模式也有人称之为"油漆工模式"。
+
+其定义如下：
+
+*Wikipedia says : In object-oriented programming, the decorator pattern is a design pattern*
+
+*that allows behavior to be added to an individual object, either statically or dynamically, without*
+
+*affecting the behavior of other objects from the same class. The decorator pattern is often useful*
+
+*for adhering to the Single Responsibility Principle, as it allows functionality to be divided between*
+
+*classes with unique areas of concern.*
+
+*在面向对象编程中，装饰模式是一种设计模式，**它允许将行为静态或动态地添加到单个对象中，***
+
+***而不会影响同一类中其他对象的行为。装饰器模式对于遵守单一责任原则通常是有用的，因为它***
+
+***允许将功能划分到具有独特关注区域的类之间**。*
+
+*Attach additional responsibilities to an object dynamically. Decorators provide a flexible*
+
+*alternative to subclassing for extending functionality.*
+
+*动态的给一个对象增加一些额外的职责。就扩展功能而言，装饰器模式提供了一种比使用子类更*
+
+*灵活的方式。*
+
+## 2.模式结构
+
+![image-20230525142213053](./images/image-20230525142213053.png)
+
+在装饰模式结构图中包含如下几个角色：
+
+**Component（抽象构件）**：它是具体构件和抽象装饰类的共同父类，声明了在具体构件中实现的业务
+
+方法，它的引入可以使客户端以一致的方式处理未被装饰的对象以及装饰之后的对象，实现客户端的透
+
+明操作。
+
+**ConcreteComponent （具体构件）**：它是抽象构件类的子类，用于定义具体的构件对象，实现了在抽
+
+象构件中声明的方法，装饰器可以给它增加额外的职责（方法）。
+
+**Decorator（抽象装饰类）**：它也是抽象构件类的子类，用于给具体构件增加职责，但是具体职责在其
+
+子类中实现。它维护一个指向抽象构件对象的引用，通过该引用可以调用装饰之前构件对象的方法，并
+
+通过其子类扩展该方法，以达到装饰的目的。
+
+**ConcreteDecorator（具体装饰类）**：它是抽象装饰类的子类，负责向构件添加新的职责。每一个具
+
+体装饰类都定义了一些新的行为，它可以调用在抽象装饰类中定义的方法，并可以增加新的方法用以扩
+
+充对象的行为。
+
+## 3.模式应用
+
+1.某图书管理系统中，书籍类（ Book ）具有借书方法 borrowBook (）和还书方法 returnBook ()。现需要动态给书籍对象添加冻结方法 freeze (）和遗失方法 lose ()。使用装饰模式设计该系统。
 
 # 十五、模板方法模式
 
+## 1.模式定义
+
+> 模板方法模式（ TemplateMethodPattern ）定义：定义一个操作中算法的骨架，而将此步骤延迟到子类中，模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。
+
+其定义如下：
+
+*Wikipedia says : The template method is a method in a superclass, usually an abstract*
+
+*superclass, and defines the skeleton of an operation in terms of a number of high-level steps.*
+
+*These steps are themselves implemented by additional helper methods in the same class as the*
+
+*template method.*
+
+*模板方法是超类（通常是抽象超类）中的一种方法，并定义了一个对一系列高层步骤的操作框*
+
+*架。这些步骤本身是由与模板方法相同的类中的其他帮助程序方法实现的。*
+
+*Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template*
+
+*Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's*
+
+*structure.*
+
+*定义一个操作中算法的框架，而将一些步骤延迟到子类中。模板方法模式使得子类可以不改变一*
+
+*个算法的结构即可重新定义该算法的某些特定步骤。*
+
+## 2.模式结构
+
+![image-20230525141342359](./images/image-20230525141342359.png)
+
+在模板方法模式结构图中包含如下几个角色：
+
+**AbstractClass （抽象类）**： 会声明作为算法步骤的方法， 以及依次调用它们的实际模板方法。 
+
+算法步骤可以被声明为抽象类型， 也可以提供一些默认实现。
+
+**ConcreteClass （具体类 ）**： 可以重写所有步骤， 但不能重写模板方法自身。
+
+## 3.模式应用
+
+1.某银行软件的利息计算流程如下：系统根据账号查询用户信息；根据用户信息判断用户类型：不同类型的用户使用不同的利息计算方式计算利息（如活期账户 CurrentAccount 和定期账户 SavingAccount 具有不同的利息计算方式）；显示利息。现使用模板方法模式来设计该系统。
