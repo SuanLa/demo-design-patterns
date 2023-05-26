@@ -7,4 +7,5 @@ int main()
 	money = MoneyFactory::getMoney(1);
 	money->discripe();
 	delete money;
+	money = nullptr;
 }

@@ -139,13 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Simple Factory Pattern\src\MoneyFactory.h" />
-    <ClInclude Include="Simple Factory Pattern\src\Dollar.h" />
-    <ClInclude Include="Simple Factory Pattern\src\Money.h" />
-    <ClInclude Include="Simple Factory Pattern\src\RMB.h" />
+    <ClInclude Include="Factory Method Pattern\src\BenzFactory.h" />
+    <ClInclude Include="Factory Method Pattern\src\BMWX8.h" />
+    <ClInclude Include="Factory Method Pattern\src\BMWFactory.h" />
+    <ClInclude Include="Factory Method Pattern\src\Car.h" />
+    <ClInclude Include="Factory Method Pattern\src\CarFactory.h" />
+    <ClInclude Include="Factory Method Pattern\src\MercedesBenz.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Simple Factory Pattern\src\main.cpp" />
+    <ClCompile Include="Factory Method Pattern\src\Client.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
