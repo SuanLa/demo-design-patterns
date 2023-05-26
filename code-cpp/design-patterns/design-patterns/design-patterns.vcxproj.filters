@@ -14,4 +14,29 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Factory Method Pattern\src\CarFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory Method Pattern\src\Car.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory Method Pattern\src\BenzFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory Method Pattern\src\BMWFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory Method Pattern\src\BMWX8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory Method Pattern\src\MercedesBenz.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Factory Method Pattern\src\Client.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
