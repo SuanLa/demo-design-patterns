@@ -1,5 +1,7 @@
 package org.example.simple_factory_pattern.realization;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -22,27 +24,29 @@ public class Client {
         user.operation();
     }
 
+    /**
+     * 判断账密
+     *
+     * @param name   账号
+     * @param passwd 密码
+     * @return int 用户等级
+     */
     public static int judgement(String name,int passwd){
-        if (name.equals(Account.SIMPLE.getName())){
-            if (passwd==Account.SIMPLE.getPasswd()){
-                return Account.SIMPLE.getDegree();
+
+        Iterator<Account> iterators = Arrays.stream(Account.values()).iterator();
+        while (true){
+            if (iterators.hasNext()){
+                Account account = iterators.next();
+                if (name.equals(account.getName())){
+                        if (account.getPasswd()==passwd){
+                            return account.getDegree();
+                        }
+                        System.out.println("密码错误！");
+                    }
+            }else {
+                System.out.println("账号错误！");
+                return -1;
             }
-            System.out.println("密码错误！");
-            return -1;
-        }else if (name.equals(Account.VIP.getName())){
-            if (passwd==Account.VIP.getPasswd()){
-                return Account.VIP.getDegree();
-            }
-            System.out.println("密码错误！");
-            return -1;
-        }else if (name.equals(Account.SVIP.getName())){
-            if (passwd==Account.SVIP.getPasswd()){
-                return Account.SVIP.getDegree();
-            }
-            System.out.println("密码错误！");
-            return -1;
         }
-        System.out.println("账号错误！");
-        return -1;
     }
 }
