@@ -14,4 +14,23 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Simple Factory Pattern\src\MoneyFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Simple Factory Pattern\src\RMB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Simple Factory Pattern\src\Dollar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Simple Factory Pattern\src\Money.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Simple Factory Pattern\src\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
