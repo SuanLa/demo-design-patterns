@@ -1,7 +1,6 @@
 package org.example.simple_factory_pattern.realization;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.ToString;
 
 /**
