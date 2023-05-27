@@ -18,6 +18,20 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Abstract Factory Pattern\src\client.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Abstract Factory Pattern\src\Connection.h" />
+    <ClInclude Include="Abstract Factory Pattern\src\DBFactory.h" />
+    <ClInclude Include="Abstract Factory Pattern\src\MySQLConnection.h" />
+    <ClInclude Include="Abstract Factory Pattern\src\MySQLFactory.h" />
+    <ClInclude Include="Abstract Factory Pattern\src\MySQLStatement.h" />
+    <ClInclude Include="Abstract Factory Pattern\src\OracleConnection.h" />
+    <ClInclude Include="Abstract Factory Pattern\src\OracleFactory.h" />
+    <ClInclude Include="Abstract Factory Pattern\src\OracleStatement.h" />
+    <ClInclude Include="Abstract Factory Pattern\src\Statement.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,17 +152,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="Factory Method Pattern\src\BenzFactory.h" />
-    <ClInclude Include="Factory Method Pattern\src\BMWX8.h" />
-    <ClInclude Include="Factory Method Pattern\src\BMWFactory.h" />
-    <ClInclude Include="Factory Method Pattern\src\Car.h" />
-    <ClInclude Include="Factory Method Pattern\src\CarFactory.h" />
-    <ClInclude Include="Factory Method Pattern\src\MercedesBenz.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Factory Method Pattern\src\Client.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
