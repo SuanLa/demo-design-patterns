@@ -914,15 +914,47 @@ Observer中定义的update()方法。通常在实现时，可以调用具体目�
 
 ## 1.模式定义
 
+> 策略模式（ StrategyPattern ）,定义一系列算法，将一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式（ Policy )。
+>
 
+其定义如下：
 
+*Wikipedia says : In computer programming, the strategy pattern (also known as the policy*
 
+*pattern) is a behavioral software design pattern that enables selecting an algorithm at runtime.*
+
+*在计算机编程中，策略模式（也称为政策模式）是一种行为软件设计模式，可以在运行时选择算*
+
+*法。*
+
+*Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy*
+
+*lets the algorithm vary independently from the clients that use it.*
+
+*定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法可以独立于*
+
+*使用它的客户端而变化。*
 
 ## 2.模式结构
 
+![image-20230529131442833](./images/image-20230529131442833.png)
 
+在策略模式结构图中包含如下几个角色：
 
+**Context（环境类）**：环境类是使用算法的角色，它在解决某个问题（即实现某个方法）时可以采
 
+用多种策略。在环境类中维持一个对抽象策略类的引用实例，用于定义所采用的策略。
+
+**Strategy（抽象策略类）**：它为所支持的算法声明了抽象方法，是所有策略类的父类，它可以是
+
+抽象类或具体类，也可以是接口。环境类通过抽象策略类中声明的方法在运行时调用具体策略类中
+
+实现的算法。
+
+**ConcreteStrategy （具体策略类）**：它实现了在抽象策略类中声明的算法，在运行时，具体策
+
+略类将覆盖在环境类中定义的抽象策略类对象，使用一种具体的算法实现某个业务处理。
 
 ## 3.模式应用
 
+1.设计一个网上书店，该系统中所有的计算机类图书（ ComputerBook ）每本都有10%的折扣，所有的语言类图书（ LanguageBook ）每本都有2元的折扣，小说类图书( NovelBook ）每100元有10元的折扣。现使用策略模式来设计该系统，绘制类图并编程实现。
