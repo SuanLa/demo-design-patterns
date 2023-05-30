@@ -15,27 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Builder Pattern\src\ComputerBuilder.h">
+    <ClInclude Include="Adapter Pattern\src\Cat.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Builder Pattern\src\ConputerDirector.h">
+    <ClInclude Include="Adapter Pattern\src\Dog.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Builder Pattern\src\DesktopComputerBuilder.h">
+    <ClInclude Include="Adapter Pattern\src\Animal.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Builder Pattern\src\NoteBookBuilder.h">
+    <ClInclude Include="Adapter Pattern\src\DogAdapter.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Builder Pattern\src\ServerComputerBulider.h">
+    <ClInclude Include="Adapter Pattern\src\CatAdaper.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Builder Pattern\src\Computer.h">
+    <ClInclude Include="Adapter Pattern\src\Role.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Builder Pattern\src\client.cpp">
+    <ClCompile Include="Adapter Pattern\src\Client.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

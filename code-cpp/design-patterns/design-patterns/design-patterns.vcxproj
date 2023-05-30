@@ -19,15 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Builder Pattern\src\Computer.h" />
-    <ClInclude Include="Builder Pattern\src\ComputerBuilder.h" />
-    <ClInclude Include="Builder Pattern\src\ConputerDirector.h" />
-    <ClInclude Include="Builder Pattern\src\DesktopComputerBuilder.h" />
-    <ClInclude Include="Builder Pattern\src\NoteBookBuilder.h" />
-    <ClInclude Include="Builder Pattern\src\ServerComputerBulider.h" />
+    <ClInclude Include="Adapter Pattern\src\Animal.h" />
+    <ClInclude Include="Adapter Pattern\src\Cat.h" />
+    <ClInclude Include="Adapter Pattern\src\CatAdaper.h" />
+    <ClInclude Include="Adapter Pattern\src\Dog.h" />
+    <ClInclude Include="Adapter Pattern\src\DogAdapter.h" />
+    <ClInclude Include="Adapter Pattern\src\Role.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Builder Pattern\src\client.cpp" />
+    <ClCompile Include="Adapter Pattern\src\Client.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
