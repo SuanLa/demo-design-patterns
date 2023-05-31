@@ -1,5 +1,5 @@
 # demo-design-patterns
-个人实现设计模式，使用java语言
+个人实现设计模式。基于java和c++语言实现。
 
 
 
