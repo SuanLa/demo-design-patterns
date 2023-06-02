@@ -19,15 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Adapter Pattern\src\Animal.h" />
-    <ClInclude Include="Adapter Pattern\src\Cat.h" />
-    <ClInclude Include="Adapter Pattern\src\CatAdaper.h" />
-    <ClInclude Include="Adapter Pattern\src\Dog.h" />
-    <ClInclude Include="Adapter Pattern\src\DogAdapter.h" />
-    <ClInclude Include="Adapter Pattern\src\Role.h" />
+    <ClInclude Include="Composite Pattern\src\AntiVirusSoftware.h" />
+    <ClInclude Include="Composite Pattern\src\FileFolder.h" />
+    <ClInclude Include="Composite Pattern\src\ImageFile.h" />
+    <ClInclude Include="Composite Pattern\src\TextFile.h" />
+    <ClInclude Include="Composite Pattern\src\VideoFile.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Adapter Pattern\src\Client.cpp" />
+    <ClCompile Include="Composite Pattern\src\client.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

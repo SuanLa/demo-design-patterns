@@ -15,27 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Adapter Pattern\src\Cat.h">
+    <ClInclude Include="Composite Pattern\src\AntiVirusSoftware.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Adapter Pattern\src\Dog.h">
+    <ClInclude Include="Composite Pattern\src\FileFolder.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Adapter Pattern\src\Animal.h">
+    <ClInclude Include="Composite Pattern\src\ImageFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Adapter Pattern\src\DogAdapter.h">
+    <ClInclude Include="Composite Pattern\src\TextFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Adapter Pattern\src\CatAdaper.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Adapter Pattern\src\Role.h">
+    <ClInclude Include="Composite Pattern\src\VideoFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Adapter Pattern\src\Client.cpp">
+    <ClCompile Include="Composite Pattern\src\client.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
