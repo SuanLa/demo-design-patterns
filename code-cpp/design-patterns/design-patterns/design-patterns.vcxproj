@@ -19,14 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Composite Pattern\src\AntiVirusSoftware.h" />
-    <ClInclude Include="Composite Pattern\src\FileFolder.h" />
-    <ClInclude Include="Composite Pattern\src\ImageFile.h" />
-    <ClInclude Include="Composite Pattern\src\TextFile.h" />
-    <ClInclude Include="Composite Pattern\src\VideoFile.h" />
+    <ClInclude Include="Proxy Pattern\App.h" />
+    <ClInclude Include="Proxy Pattern\Application.h" />
+    <ClInclude Include="Proxy Pattern\Picture.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Composite Pattern\src\client.cpp" />
+    <ClCompile Include="Proxy Pattern\client.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -15,24 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Composite Pattern\src\AntiVirusSoftware.h">
+    <ClInclude Include="Proxy Pattern\App.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Composite Pattern\src\FileFolder.h">
+    <ClInclude Include="Proxy Pattern\Application.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Composite Pattern\src\ImageFile.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Composite Pattern\src\TextFile.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Composite Pattern\src\VideoFile.h">
+    <ClInclude Include="Proxy Pattern\Picture.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Composite Pattern\src\client.cpp">
+    <ClCompile Include="Proxy Pattern\client.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
