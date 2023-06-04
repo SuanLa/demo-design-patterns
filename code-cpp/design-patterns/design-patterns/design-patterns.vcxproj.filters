@@ -15,21 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Simple Factory Pattern\src\Dollar.h">
+    <ClInclude Include="Iterator Pattern\src\Student.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Simple Factory Pattern\src\Money.h">
+    <ClInclude Include="Iterator Pattern\src\Class.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Simple Factory Pattern\src\MoneyFactory.h">
+    <ClInclude Include="Iterator Pattern\src\ClassAggregate.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Simple Factory Pattern\src\RMB.h">
+    <ClInclude Include="Iterator Pattern\src\Iterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Iterator Pattern\src\StudentItearator.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Simple Factory Pattern\src\main.cpp">
+    <ClCompile Include="Iterator Pattern\src\client.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

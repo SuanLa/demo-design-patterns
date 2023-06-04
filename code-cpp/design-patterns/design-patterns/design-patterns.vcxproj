@@ -19,13 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Simple Factory Pattern\src\Dollar.h" />
-    <ClInclude Include="Simple Factory Pattern\src\Money.h" />
-    <ClInclude Include="Simple Factory Pattern\src\MoneyFactory.h" />
-    <ClInclude Include="Simple Factory Pattern\src\RMB.h" />
+    <ClInclude Include="Iterator Pattern\src\Class.h" />
+    <ClInclude Include="Iterator Pattern\src\ClassAggregate.h" />
+    <ClInclude Include="Iterator Pattern\src\Iterator.h" />
+    <ClInclude Include="Iterator Pattern\src\Student.h" />
+    <ClInclude Include="Iterator Pattern\src\StudentItearator.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Simple Factory Pattern\src\main.cpp" />
+    <ClCompile Include="Iterator Pattern\src\client.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
