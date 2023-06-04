@@ -5,5 +5,7 @@ int main()
 {
 	App* app = new Picture();
 	app->run();
+	delete app;
+	app = nullptr;
 	return 0;
 }

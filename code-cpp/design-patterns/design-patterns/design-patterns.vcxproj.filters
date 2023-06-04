@@ -15,18 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Proxy Pattern\App.h">
+    <ClInclude Include="Simple Factory Pattern\src\Dollar.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Proxy Pattern\Application.h">
+    <ClInclude Include="Simple Factory Pattern\src\Money.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Proxy Pattern\Picture.h">
+    <ClInclude Include="Simple Factory Pattern\src\MoneyFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Simple Factory Pattern\src\RMB.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Proxy Pattern\client.cpp">
+    <ClCompile Include="Simple Factory Pattern\src\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

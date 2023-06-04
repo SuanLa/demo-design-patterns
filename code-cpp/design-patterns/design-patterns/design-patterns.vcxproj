@@ -19,12 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Proxy Pattern\App.h" />
-    <ClInclude Include="Proxy Pattern\Application.h" />
-    <ClInclude Include="Proxy Pattern\Picture.h" />
+    <ClInclude Include="Simple Factory Pattern\src\Dollar.h" />
+    <ClInclude Include="Simple Factory Pattern\src\Money.h" />
+    <ClInclude Include="Simple Factory Pattern\src\MoneyFactory.h" />
+    <ClInclude Include="Simple Factory Pattern\src\RMB.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Proxy Pattern\client.cpp" />
+    <ClCompile Include="Simple Factory Pattern\src\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
