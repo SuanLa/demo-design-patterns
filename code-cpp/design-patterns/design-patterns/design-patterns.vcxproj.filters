@@ -15,18 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TemplateMethodPattern\src\Bank.h">
+    <ClInclude Include="Strategy Pattern\src\Book.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="TemplateMethodPattern\src\CurrentAccount.h">
+    <ClInclude Include="Strategy Pattern\src\ComputerBook.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="TemplateMethodPattern\src\SavingAccount.h">
+    <ClInclude Include="Strategy Pattern\src\LanguageBook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Strategy Pattern\src\NovelBook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Strategy Pattern\src\Store.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TemplateMethodPattern\src\client.cpp">
+    <ClCompile Include="Strategy Pattern\src\client.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

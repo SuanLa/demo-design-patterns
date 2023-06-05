@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TemplateMethodPattern\src\Bank.h" />
-    <ClInclude Include="TemplateMethodPattern\src\CurrentAccount.h" />
-    <ClInclude Include="TemplateMethodPattern\src\SavingAccount.h" />
+    <ClInclude Include="Strategy Pattern\src\Book.h" />
+    <ClInclude Include="Strategy Pattern\src\ComputerBook.h" />
+    <ClInclude Include="Strategy Pattern\src\LanguageBook.h" />
+    <ClInclude Include="Strategy Pattern\src\NovelBook.h" />
+    <ClInclude Include="Strategy Pattern\src\Store.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TemplateMethodPattern\src\client.cpp" />
+    <ClCompile Include="Strategy Pattern\src\client.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

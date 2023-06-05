@@ -10,5 +10,9 @@ int main()
 	bookDec->returnBook();
 	bookDec->freeze();
 	bookDec->lose();
+	delete book;
+	book = nullptr;
+	delete bookDec;
+	bookDec = nullptr;
 	return 0;
 }

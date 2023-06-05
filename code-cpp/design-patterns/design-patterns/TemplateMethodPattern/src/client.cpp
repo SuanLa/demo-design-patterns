@@ -7,5 +7,9 @@ int main()
 	CurrentAccount* cacc = new CurrentAccount(2222, 10000);
 	sacc->startCalc();
 	cacc->startCalc();
+	delete sacc;
+	sacc = nullptr;
+	delete cacc;
+	cacc = nullptr;
 	return 0;
 }
