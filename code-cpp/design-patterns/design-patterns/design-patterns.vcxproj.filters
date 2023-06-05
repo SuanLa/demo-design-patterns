@@ -15,24 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Iterator Pattern\src\Student.h">
+    <ClInclude Include="DecoratorPattern\src\Book.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Iterator Pattern\src\Class.h">
+    <ClInclude Include="DecoratorPattern\src\ConcreteBook.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Iterator Pattern\src\ClassAggregate.h">
+    <ClInclude Include="DecoratorPattern\src\Decorator.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Iterator Pattern\src\Iterator.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Iterator Pattern\src\StudentItearator.h">
+    <ClInclude Include="DecoratorPattern\src\BookDecorator.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Iterator Pattern\src\client.cpp">
+    <ClCompile Include="DecoratorPattern\src\client.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

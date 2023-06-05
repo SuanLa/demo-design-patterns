@@ -19,14 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Iterator Pattern\src\Class.h" />
-    <ClInclude Include="Iterator Pattern\src\ClassAggregate.h" />
-    <ClInclude Include="Iterator Pattern\src\Iterator.h" />
-    <ClInclude Include="Iterator Pattern\src\Student.h" />
-    <ClInclude Include="Iterator Pattern\src\StudentItearator.h" />
+    <ClInclude Include="DecoratorPattern\src\Book.h" />
+    <ClInclude Include="DecoratorPattern\src\BookDecorator.h" />
+    <ClInclude Include="DecoratorPattern\src\ConcreteBook.h" />
+    <ClInclude Include="DecoratorPattern\src\Decorator.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Iterator Pattern\src\client.cpp" />
+    <ClCompile Include="DecoratorPattern\src\client.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
