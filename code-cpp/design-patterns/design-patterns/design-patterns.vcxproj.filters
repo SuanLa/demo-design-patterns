@@ -15,21 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DecoratorPattern\src\Book.h">
+    <ClInclude Include="TemplateMethodPattern\src\Bank.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="DecoratorPattern\src\ConcreteBook.h">
+    <ClInclude Include="TemplateMethodPattern\src\CurrentAccount.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="DecoratorPattern\src\Decorator.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DecoratorPattern\src\BookDecorator.h">
+    <ClInclude Include="TemplateMethodPattern\src\SavingAccount.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DecoratorPattern\src\client.cpp">
+    <ClCompile Include="TemplateMethodPattern\src\client.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

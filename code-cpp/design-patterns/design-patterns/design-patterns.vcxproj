@@ -19,13 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DecoratorPattern\src\Book.h" />
-    <ClInclude Include="DecoratorPattern\src\BookDecorator.h" />
-    <ClInclude Include="DecoratorPattern\src\ConcreteBook.h" />
-    <ClInclude Include="DecoratorPattern\src\Decorator.h" />
+    <ClInclude Include="TemplateMethodPattern\src\Bank.h" />
+    <ClInclude Include="TemplateMethodPattern\src\CurrentAccount.h" />
+    <ClInclude Include="TemplateMethodPattern\src\SavingAccount.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DecoratorPattern\src\client.cpp" />
+    <ClCompile Include="TemplateMethodPattern\src\client.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
